@@ -22,9 +22,9 @@
     xhr.onreadystatechange = function(){
         console.log(xhr.readyState);
         if(xhr.readyState === 4){
-            console.log(this.responseText);
+            const data = JSON.parse((this.responseText));
             console.log('here');
-            console.log(data);
+            console.log(typeof(data));
             console.log(data.followers);
         }
     }
